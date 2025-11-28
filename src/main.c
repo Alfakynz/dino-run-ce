@@ -48,9 +48,11 @@ bool play(void) {
 
 #if USE_USB
         duck_pressed = kb_IsDown(kb_KeyDown) ||
+                       kb_IsDown(kb_KeyAlpha) ||
                        any_hid_held(KEY_DOWN) ||
                        any_hid_mouse_held(HID_MOUSE_RIGHT);
         jump_pressed = kb_IsDown(kb_KeyUp) ||
+                       kb_IsDown(kb_Key2nd)
                        any_hid_held(KEY_UP) ||
                        any_hid_held(KEY_SPACE) ||
                        any_hid_mouse_held(HID_MOUSE_LEFT);
